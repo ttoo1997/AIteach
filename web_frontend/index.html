@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AITeach Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+      },
+      svg: { fontCache: "global" },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-head">
+          <img src="/assets/xjtu.jpeg" alt="西安交通大学校徽" class="brand-logo" />
+          <h1>AITeach</h1>
+        </div>
+        <p>电机学智能学习平台</p>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" data-panel="panel-solve">AI 解题</button>
+        <button class="nav-btn" data-panel="panel-qa">知识库问答</button>
+        <button class="nav-btn" data-panel="panel-sim">仿真实验</button>
+        <button class="nav-btn" data-panel="panel-wrong">错题本</button>
+      </nav>
+      <section class="status-card">
+        <h3>系统状态</h3>
+        <div id="health-line">正在检查服务...</div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <header class="hero hero-minimal">
+        <div class="hero-main">
+          <h2>AITeach 智能学习助手</h2>
+          <p>解题 · 复盘 · 仿真</p>
+        </div>
+        <div class="hero-actions">
+          <button id="login-btn" type="button" class="hero-login">登录</button>
+        </div>
+      </header>
+
+      <section id="panel-solve" class="panel active">
+        <article class="card solve-chat-card">
+          <div class="result-head solve-chat-head">
+            <div>
+              <h3>AI 解题对话</h3>
+              <p class="inline-note solve-chat-note">一个聊天框同时支持文字提问、图片题上传和连续追问。</p>
+            </div>
+            <div class="solve-chat-tools">
+              <label class="mini-label compact-field" for="solve-mode">
+                模式
+                <select id="solve-mode" class="select-compact">
+                  <option value="standard" selected>标准（推荐）</option>
+                  <option value="fast">快速</option>
+                </select>
+              </label>
+              <button id="clear-solve-chat" type="button" class="btn-soft">清空对话</button>
+            </div>
+          </div>
+          <div id="solve-chat-log" class="solve-chat-log">
+            <div class="solve-chat-ready">
+              <span>AI解题已就绪</span>
+            </div>
+          </div>
+          <div id="solve-feedback" class="feedback-panel hidden">
+            <div class="feedback-actions">
+              <button id="add-to-wrongbook" type="button" class="btn-soft">加入错题本</button>
+            </div>
+            <div id="wrong-reason-wrap" class="hidden" style="margin-top: 10px;">
+              <label for="wrong-reason-input">错误原因（用于保存到错题本）</label>
+              <textarea id="wrong-reason-input" rows="3" placeholder="例如：公式选错、单位换算遗漏、边界条件理解错误..."></textarea>
+              <div class="feedback-actions" style="margin-top: 8px;">
+                <button id="save-wrong-question" type="button">确认加入错题本</button>
+              </div>
+            </div>
+            <div id="solve-feedback-tip" class="feedback-tip"></div>
+          </div>
+          <form id="solve-chat-form" class="solve-composer">
+            <input id="solve-chat-file" type="file" accept="image/*" class="hidden" />
+            <div id="solve-attachment-preview" class="solve-attachment-preview hidden">
+              <img id="solve-attachment-image" alt="上传题目预览" />
+              <div class="solve-attachment-meta">
+                <strong id="solve-attachment-name">题目图片</strong>
+                <span>将随本轮消息一起发送给 AI</span>
+              </div>
+              <button id="solve-attachment-remove" type="button" class="btn-soft">移除</button>
+            </div>
+            <textarea
+              id="solve-chat-input"
+              rows="3"
+              placeholder="请输入题目，或上传图片后补充说明。也可以继续追问上一轮答案。"
+            ></textarea>
+            <div class="solve-composer-bar">
+              <div class="solve-composer-side">
+                <button
+                  id="solve-upload-trigger"
+                  type="button"
+                  class="icon-circle-btn icon-circle-btn-soft"
+                  aria-label="上传附件"
+                  title="上传附件"
+                >
+                  <svg class="icon-svg icon-plus-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 5V19"></path>
+                    <path d="M5 12H19"></path>
+                  </svg>
+                </button>
+                <span class="solve-composer-tip">支持图片题、上下文追问</span>
+              </div>
+              <button
+                id="solve-send-btn"
+                type="submit"
+                class="icon-circle-btn icon-circle-btn-primary"
+                aria-label="发送"
+                title="发送"
+              >
+                <svg class="icon-svg icon-send-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 20V5"></path>
+                  <path d="M5 12L12 5L19 12"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section id="panel-qa" class="panel">
+        <form id="qa-form" class="card">
+          <h3>知识库问答</h3>
+          <label for="qa-question">问题</label>
+          <textarea id="qa-question" rows="4" placeholder="请输入知识库问题..."></textarea>
+          <div class="row">
+            <label>候选数量
+              <input id="qa-topk" type="number" min="1" max="10" value="3" />
+            </label>
+            <label>相似度阈值
+              <input id="qa-threshold" type="number" min="0.1" max="0.95" step="0.01" value="0.18" />
+            </label>
+          </div>
+          <button type="submit">检索并回答</button>
+          </form>
+        <article class="card result-card">
+          <div class="result-head">
+            <h3>问答结果</h3>
+            <div id="qa-thinking" class="thinking hidden">
+              <div class="orb"></div>
+              <span>AI 正在检索...</span>
+            </div>
+          </div>
+          <div id="qa-result" class="result-body empty">等待问题输入。</div>
+        </article>
+      </section>
+
+      <section id="panel-sim" class="panel sim-panel">
+        <article class="card sim-fixed-card">
+          <div class="result-head">
+            <h3>固定仿真实验</h3>
+          </div>
+          <p class="inline-note">按直流电机、变压器、异步电机、同步电机四个实验依次完成，支持 MATLAB 后端计算。</p>
+          <div id="sim-lab-list" class="sim-lab-list empty">正在加载固定实验清单...</div>
+        </article>
+
+        <div class="split sim-layout sim-runtime-split">
+          <article class="card sim-lab-workbench-card">
+            <div id="sim-lab-detail" class="result-body empty">请选择一个实验查看电路图、曲线图与教程。</div>
+            <form id="sim-lab-form" class="sim-lab-form">
+              <h4>参数设置</h4>
+              <div id="sim-lab-params" class="sim-lab-params"></div>
+              <label class="mini-label compact-field">仿真后端
+                <select id="sim-backend" class="select-compact">
+                  <option value="auto">auto</option>
+                  <option value="python">python</option>
+                  <option value="service">service</option>
+                  <option value="matlab">matlab</option>
+                </select>
+              </label>
+              <div class="sim-matlab-config-card">
+                <div class="sim-matlab-config-head">
+                  <h5>MATLAB CLI 路径</h5>
+                  <span class="designer-pill">本机配置</span>
+                </div>
+                <label class="mini-label compact-field" for="matlab-cli-mode">
+                  路径策略
+                  <select id="matlab-cli-mode" class="select-compact">
+                    <option value="auto">自动探测（推荐）</option>
+                    <option value="custom">手动指定</option>
+                  </select>
+                </label>
+                <label class="sim-matlab-path-field" for="matlab-cli-path">
+                  可执行文件或安装目录
+                  <input
+                    id="matlab-cli-path"
+                    type="text"
+                    placeholder="例如 D:\\MATLAB\\R2023a 或 D:\\MATLAB\\R2023a\\bin\\matlab.exe"
+                  />
+                </label>
+                <div class="sim-matlab-config-actions">
+                  <button id="matlab-cli-save" type="button" class="btn-soft">保存路径设置</button>
+                </div>
+                <p id="sim-matlab-config-note" class="inline-note">默认会自动探测。不同电脑可各自保存本机 MATLAB 路径，不必改代码。</p>
+              </div>
+              <p id="sim-matlab-status" class="inline-note">MATLAB 状态检查中...</p>
+              <button id="sim-run-btn" type="submit">运行实验</button>
+            </form>
+          </article>
+
+          <article class="card result-card sim-runtime-result-card">
+            <div class="result-head">
+              <h3>仿真结果</h3>
+              <div id="sim-thinking" class="thinking hidden">
+                <div class="orb"></div>
+                <span>正在计算...</span>
+              </div>
+            </div>
+            <div id="sim-result" class="result-body empty">等待实验运行。</div>
+          </article>
+        </div>
+
+        <article class="card sim-coach-panel">
+          <div class="result-head">
+            <h3>AI 仿真实验指导</h3>
+            <div id="sim-coach-thinking" class="thinking hidden">
+              <div class="orb"></div>
+              <span>AI 正在思考...</span>
+            </div>
+          </div>
+          <p class="inline-note">你可以结合当前实验提问：参数如何调、结论怎么写、下一步练什么。</p>
+          <div id="sim-coach-log" class="sim-coach-log">
+            <div class="sim-coach-ready">
+              <span>仿真助教已就绪</span>
+            </div>
+          </div>
+          <form id="sim-coach-form" class="sim-coach-form">
+            <textarea id="sim-coach-input" rows="2" placeholder="例如：为什么异步电机的最大转矩不在 s=1？"></textarea>
+            <div class="sim-coach-actions">
+              <button id="sim-coach-clear" type="button" class="btn-soft">清空</button>
+              <button id="sim-coach-send" type="submit">发送</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section id="panel-wrong" class="panel">
+        <div class="card">
+          <div class="result-head">
+            <h3>错题本</h3>
+            <button id="reload-wrong" type="button" class="btn-soft">刷新列表</button>
+          </div>
+          <div class="wrong-toolbar">
+            <div id="wrong-page-meta" class="inline-note">共 0 条 · 第 1/1 页</div>
+            <div class="wrong-pager">
+              <label class="mini-label compact-field" for="wrong-page-size">
+                每页
+                <select id="wrong-page-size" class="select-compact">
+                  <option value="4">4</option>
+                  <option value="6" selected>6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+              <button id="wrong-prev" type="button" class="btn-soft">上一页</button>
+              <button id="wrong-next" type="button" class="btn-soft">下一页</button>
+            </div>
+          </div>
+          <div id="wrong-list" class="result-body empty">正在加载错题记录...</div>
+        </div>
+
+        <div class="card wrong-ai-card">
+          <div class="result-head">
+            <h3>AI 错题教练</h3>
+            <div id="wrong-ai-thinking" class="thinking hidden">
+              <div class="orb"></div>
+              <span>AI 正在分析...</span>
+            </div>
+          </div>
+          <div class="feedback-actions">
+            <button id="analyze-wrongbook" type="button">分析掌握情况</button>
+            <button id="new-practice-question" type="button" class="btn-soft">出一道练习题</button>
+          </div>
+          <div id="wrong-analysis" class="result-body empty">点击“分析掌握情况”后，将给出你的知识掌握画像和学习建议。</div>
+
+          <div id="practice-card" class="practice-card hidden">
+            <div class="practice-head">
+              <h4 id="practice-title">练习题</h4>
+              <span id="practice-meta" class="designer-pill">中等</span>
+            </div>
+            <div id="practice-question" class="result-body"></div>
+            <p id="practice-hint" class="inline-note"></p>
+            <label for="practice-attempt">你的作答（可选）</label>
+            <textarea id="practice-attempt" rows="4" placeholder="先自己做一遍，再点“查看解析”更有训练效果。"></textarea>
+            <div class="practice-actions">
+              <button id="show-practice-explain" type="button">查看解析</button>
+              <button id="practice-add-to-wrongbook" type="button" class="btn-soft hidden">加入错题本</button>
+              <button id="another-practice-question" type="button" class="btn-soft">再来一道题</button>
+            </div>
+            <div id="practice-explanation" class="result-body empty hidden">点击“查看解析”后展示讲解。</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/assets/app.js"></script>
+  <script src="/assets/app_coach.js"></script>
+  <script src="/assets/app_boot.js"></script>
+</body>
+</html>

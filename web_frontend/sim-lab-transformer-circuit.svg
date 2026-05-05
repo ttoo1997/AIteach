@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Approximate transformer equivalent circuit referred to one side">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <style>
+      .wire{stroke:#1f5cae;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .title{fill:#1f4f97;font:28px 'Noto Sans SC',sans-serif}
+      .text{fill:#2f6ec8;font:22px 'Noto Sans SC',sans-serif}
+      .note{fill:#476892;font:20px 'Noto Sans SC',sans-serif}
+    </style>
+  </defs>
+  <rect x="10" y="10" width="880" height="500" rx="24" fill="url(#bg)" stroke="#d7e6ff"/>
+
+  <line class="wire" x1="110" y1="120" x2="790" y2="120"/>
+  <line class="wire" x1="110" y1="400" x2="790" y2="400"/>
+  <line class="wire" x1="110" y1="120" x2="110" y2="400"/>
+
+  <circle cx="110" cy="260" r="54" fill="#fff" stroke="#1f5cae" stroke-width="6"/>
+  <text class="title" x="92" y="272">~</text>
+  <text class="text" x="56" y="194">Vref</text>
+
+  <line class="wire" x1="255" y1="120" x2="255" y2="400"/>
+  <polyline class="wire" points="255,160 280,185 230,210 280,235 230,260 280,285 230,310 255,335"/>
+  <text class="text" x="298" y="258">Rc</text>
+
+  <line class="wire" x1="360" y1="120" x2="360" y2="400"/>
+  <path class="wire" d="M335 170q25 25 0 50q25 25 0 50q25 25 0 50"/>
+  <text class="text" x="392" y="258">jXm</text>
+  <text class="note" x="214" y="446">励磁支路</text>
+
+  <line class="wire" x1="470" y1="120" x2="470" y2="190"/>
+  <polyline class="wire" points="470,190 495,215 445,240 495,265 445,290 495,315 470,340"/>
+  <line class="wire" x1="470" y1="340" x2="470" y2="400"/>
+  <text class="text" x="510" y="262">Req</text>
+
+  <line class="wire" x1="615" y1="120" x2="615" y2="175"/>
+  <path class="wire" d="M590 175q25 25 0 50q25 25 0 50q25 25 0 50"/>
+  <line class="wire" x1="615" y1="325" x2="615" y2="400"/>
+  <text class="text" x="648" y="258">jXeq</text>
+  <text class="note" x="482" y="446">串联漏阻抗</text>
+
+  <line class="wire" x1="760" y1="120" x2="760" y2="180"/>
+  <polyline class="wire" points="760,180 785,205 735,230 785,255 735,280 785,305 760,330"/>
+  <line class="wire" x1="760" y1="330" x2="760" y2="400"/>
+  <text class="text" x="800" y="262">ZL</text>
+
+  <text class="title" x="165" y="70">变压器近似等效电路（折算到同一侧）</text>
+  <text class="note" x="146" y="478">理想变压器已省略；励磁支路并联，负载前保留串联等效电阻与漏抗</text>
+</svg>

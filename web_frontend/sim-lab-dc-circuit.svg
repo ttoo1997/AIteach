@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Shunt DC motor equivalent circuit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <style>
+      .wire{stroke:#1f5cae;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .title{fill:#1f4f97;font:28px 'Noto Sans SC',sans-serif}
+      .text{fill:#2f6ec8;font:22px 'Noto Sans SC',sans-serif}
+      .note{fill:#476892;font:20px 'Noto Sans SC',sans-serif}
+    </style>
+  </defs>
+  <rect x="10" y="10" width="880" height="500" rx="24" fill="url(#bg)" stroke="#d7e6ff"/>
+
+  <line class="wire" x1="110" y1="120" x2="760" y2="120"/>
+  <line class="wire" x1="110" y1="400" x2="760" y2="400"/>
+  <line class="wire" x1="110" y1="120" x2="110" y2="400"/>
+
+  <circle cx="110" cy="260" r="54" fill="#fff" stroke="#1f5cae" stroke-width="6"/>
+  <text class="title" x="92" y="272">+</text>
+  <text class="title" x="94" y="316">-</text>
+  <text class="text" x="72" y="194">Vt</text>
+
+  <line class="wire" x1="280" y1="120" x2="280" y2="400"/>
+  <polyline class="wire" points="280,165 305,190 255,215 305,240 255,265 305,290 255,315 280,340"/>
+  <text class="text" x="320" y="258">Rf</text>
+  <text class="note" x="222" y="446">励磁支路</text>
+
+  <line class="wire" x1="540" y1="120" x2="540" y2="180"/>
+  <polyline class="wire" points="540,180 565,205 515,230 565,255 515,280 565,305 515,330 540,355"/>
+  <text class="text" x="582" y="262">Ra</text>
+  <line class="wire" x1="540" y1="355" x2="540" y2="400"/>
+
+  <circle cx="690" cy="260" r="62" fill="#fff" stroke="#1f5cae" stroke-width="6"/>
+  <path class="wire" d="M655 260q35-40 70 0q-35 40-70 0"/>
+  <path class="wire" d="M698 220v80"/>
+  <text class="text" x="652" y="356">Eb = kPhi omega</text>
+  <text class="note" x="590" y="446">电枢支路</text>
+
+  <line class="wire" x1="540" y1="260" x2="628" y2="260"/>
+  <line class="wire" x1="752" y1="260" x2="760" y2="260"/>
+
+  <text class="title" x="242" y="70">并励直流电机等效电路</text>
+  <text class="note" x="190" y="478">场绕组与电枢绕组并联，电枢支路内含电阻 Ra 与反电势 Eb</text>
+</svg>

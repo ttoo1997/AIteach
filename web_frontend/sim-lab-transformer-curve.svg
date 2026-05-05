@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Transformer regulation and efficiency curves">
+  <style>
+    .axis { stroke: #111111; stroke-width: 5; stroke-linecap: round; }
+    .curve { stroke: #111111; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #111111; stroke-width: 5; fill: none; stroke-dasharray: 14 10; stroke-linecap: round; }
+    .grid { stroke: #d4d4d4; stroke-width: 2; }
+    .title { fill: #111111; font: 28px Arial, sans-serif; font-weight: 700; }
+    .label { fill: #111111; font: 20px Arial, sans-serif; }
+    .note { fill: #444444; font: 18px Arial, sans-serif; }
+  </style>
+
+  <g>
+    <line class="grid" x1="130" y1="120" x2="790" y2="120"/>
+    <line class="grid" x1="130" y1="190" x2="790" y2="190"/>
+    <line class="grid" x1="130" y1="260" x2="790" y2="260"/>
+    <line class="grid" x1="130" y1="330" x2="790" y2="330"/>
+    <line class="grid" x1="130" y1="400" x2="790" y2="400"/>
+  </g>
+
+  <line class="axis" x1="130" y1="400" x2="790" y2="400"/>
+  <line class="axis" x1="130" y1="400" x2="130" y2="86"/>
+  <polyline class="curve" points="130,312 220,258 310,214 400,182 490,164 580,170 670,198 790,250"/>
+  <polyline class="dash" points="130,156 230,170 330,186 430,210 530,238 630,270 710,298 790,320"/>
+
+  <text class="title" x="194" y="64">Transformer Regulation &amp; Efficiency</text>
+  <text class="label" x="74" y="94">Percent (%)</text>
+  <text class="label" x="698" y="438">Load (p.u.)</text>
+  <line class="curve" x1="548" y1="108" x2="604" y2="108"/>
+  <text class="label" x="620" y="116">Efficiency</text>
+  <line class="dash" x1="548" y1="144" x2="604" y2="144"/>
+  <text class="label" x="620" y="152">Regulation</text>
+  <text class="note" x="186" y="474">Peak efficiency usually appears near rated load.</text>
+</svg>

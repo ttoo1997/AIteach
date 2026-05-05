@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" fill="none" role="img" aria-label="Induction motor torque slip curve">
+  <style>
+    .axis { stroke: #111111; stroke-width: 5; stroke-linecap: round; }
+    .curve { stroke: #111111; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #111111; stroke-width: 4; fill: none; stroke-dasharray: 12 10; stroke-linecap: round; }
+    .grid { stroke: #d4d4d4; stroke-width: 2; }
+    .title { fill: #111111; font: 28px Arial, sans-serif; font-weight: 700; }
+    .label { fill: #111111; font: 21px Arial, sans-serif; }
+    .note { fill: #444444; font: 18px Arial, sans-serif; }
+  </style>
+
+  <g>
+    <line class="grid" x1="120" y1="110" x2="880" y2="110"/>
+    <line class="grid" x1="120" y1="165" x2="880" y2="165"/>
+    <line class="grid" x1="120" y1="220" x2="880" y2="220"/>
+    <line class="grid" x1="120" y1="275" x2="880" y2="275"/>
+    <line class="grid" x1="120" y1="330" x2="880" y2="330"/>
+  </g>
+
+  <line class="axis" x1="120" y1="330" x2="880" y2="330"/>
+  <line class="axis" x1="120" y1="330" x2="120" y2="72"/>
+  <path class="curve" d="M122 322 C 230 126, 362 88, 472 168 C 574 246, 694 292, 880 320"/>
+  <path class="dash" d="M122 322 C 242 148, 392 126, 522 202 C 636 270, 748 306, 880 324"/>
+  <path class="dash" d="M122 323 C 216 182, 336 156, 438 220 C 552 286, 684 318, 880 330"/>
+
+  <circle cx="472" cy="168" r="7" fill="#111111"/>
+  <circle cx="880" cy="320" r="7" fill="#111111"/>
+  <line x1="472" y1="168" x2="548" y2="126" stroke="#111111" stroke-width="3"/>
+  <line x1="880" y1="320" x2="796" y2="270" stroke="#111111" stroke-width="3"/>
+
+  <text class="title" x="246" y="52">Induction Motor Torque-Slip</text>
+  <text class="label" x="94" y="60">Torque T</text>
+  <text class="label" x="892" y="344">Slip s</text>
+  <text class="note" x="560" y="122">Tmax</text>
+  <text class="note" x="648" y="264">Start point (s = 1)</text>
+  <text class="note" x="654" y="380">Dashed lines: parameter sweep</text>
+</svg>

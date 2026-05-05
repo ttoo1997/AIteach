@@ -1,0 +1,100 @@
+{"messages":[{"role":"user","content":"磁路的欧姆定律表达式是什么？"},{"role":"assistant","content":"F=ΦRm​，其中F=Ni（磁动势，单位 A），Φ为磁通（单位 Wb），Rm​=μAl​（磁阻，单位 A/Wb）"}]}
+{"messages":[{"role":"user","content":"铁磁材料的磁化曲线主要分为哪几类？"},{"role":"assistant","content":"分为初始磁化曲线、磁滞回线、基本磁化曲线三类"}]}
+{"messages":[{"role":"user","content":"磁滞损耗的计算公式是什么？"},{"role":"assistant","content":"ph​=Ch​fBmn​V，其中Ch​为磁滞损耗系数，f为磁场交变频率，Bm​为磁通密度幅值，n为指数（一般为 1.6~2.3），V为铁心体积"}]}
+{"messages":[{"role":"user","content":"涡流损耗的计算公式是什么？"},{"role":"assistant","content":"pe​=Ce​Δ2f2Bm2​V，其中Ce​为涡流损耗系数，Δ为硅钢片厚度，f为频率，Bm​为磁通密度幅值，V为铁心体积"}]}
+{"messages":[{"role":"user","content":"直流磁路与交流磁路的核心区别是什么？"},{"role":"assistant","content":"直流磁路中磁通恒定，无铁心损耗；交流磁路中磁通随时间交变，存在磁滞和涡流损耗，且激磁电流包含磁化分量（无功）和铁耗分量（有功）"}]}
+{"messages":[{"role":"user","content":"处理气隙磁场边缘效应时，气隙有效面积如何计算？"},{"role":"assistant","content":"若铁心截面积为a×b、气隙长度为δ，且δ远小于a和b，则气隙有效面积Aδ(有效)​≈(a+δ)(b+δ)"}]}
+{"messages":[{"role":"user","content":"永磁材料的主要性能指标有哪些？"},{"role":"assistant","content":"剩磁Br​（剩余磁通密度）、矫顽力Hc​（使磁通密度降为零所需的反向磁场强度）、最大磁能积∣BH∣max​（表征永磁材料存储磁能的能力）"}]}
+{"messages":[{"role":"user","content":"电机和变压器铁心常用的铁磁材料是什么？其特点是什么？"},{"role":"assistant","content":"常用电工硅钢片，含硅量 0.5%~4.8%；特点是磁导率高、铁耗低，按轧制方式分为热轧（各向同性）和冷轧（含无取向、单取向，单取向磁性能更优）"}]}
+{"messages":[{"role":"user","content":"磁路的基尔霍夫第一定律内容是什么？"},{"role":"assistant","content":"穿出（或进入）任一闭合曲面的总磁通量恒等于零，即∑Φ=0，类比电路基尔霍夫第一定律（电流守恒）"}]}
+{"messages":[{"role":"user","content":"磁路的基尔霍夫第二定律内容是什么？"},{"role":"assistant","content":"作用在任何闭合磁路的总磁动势恒等于各段磁路中磁位降的代数和，即Ni=∑Hk​lk​，类比电路基尔霍夫第二定律（电压守恒）"}]}
+{"messages":[{"role":"user","content":"线圈电抗与磁路磁导的关系表达式是什么？"},{"role":"assistant","content":"X=ωN2Λm​，其中ω为角频率，N为线圈匝数，Λm​为磁路磁导（Λm​=1/Rm​）"}]}
+{"messages":[{"role":"user","content":"变压器的主磁通和漏磁通区别是什么？"},{"role":"assistant","content":"主磁通：通过铁心、与一次和二次绕组均交链，参与能量传递；漏磁通：仅与一个绕组交链、主要通过空气 / 油闭合，不参与能量传递，仅产生漏抗压降"}]}
+{"messages":[{"role":"user","content":"理想变压器的电压比公式是什么？"},{"role":"assistant","content":"U2​U1​​=N2​N1​​=k，其中、为一次、二次电压，、为一次、二次匝数，k为电压比"}]}
+{"messages":[{"role":"user","content":"理想变压器的电流比公式是什么？"},{"role":"assistant","content":"I2​I1​​=N1​N2​​=k1​，其中、为一次、二次电流，k为电压比"}]}
+{"messages":[{"role":"user","content":"变压器空载电流的组成是什么？"},{"role":"assistant","content":"包含磁化电流iμ​（无功，用于激励主磁通）和铁耗电流iFe​（有功，对应铁心损耗），即im​=iμ​+iFe​"}]}
+{"messages":[{"role":"user","content":"变压器一次绕组感应电动势的有效值公式是什么？"},{"role":"assistant","content":"E1​=4.44fN1​Φm​，其中f为电源频率，N1​为一次匝数，Φm​为主磁通幅值"}]}
+{"messages":[{"role":"user","content":"变压器激磁阻抗的组成是什么？"},{"role":"assistant","content":"激磁阻抗Zm​=Rm​+jXm​，其中Rm​为激磁电阻（表征铁心损耗），Xm​为激磁电抗（表征铁心磁化性能）"}]}
+{"messages":[{"role":"user","content":"变压器绕组归算的核心原则是什么？"},{"role":"assistant","content":"归算前后绕组的磁动势、功率（有功、无功）、损耗保持不变；二次归算到一次时，电压 / 电动势乘k，电流除k，阻抗乘k2"}]}
+{"messages":[{"role":"user","content":"变压器 T 形等效电路的组成部分是什么？"},{"role":"assistant","content":"一次侧漏阻抗Z1σ​=R1​+jX1σ​、二次侧归算漏阻抗Z2σ′​=R2′​+jX2σ′​、激磁阻抗Zm​=Rm​+jXm​"}]}
+{"messages":[{"role":"user","content":"变压器短路试验的目的是什么？"},{"role":"assistant","content":"测定短路阻抗Zk​=Rk​+jXk​（Rk​=R1​+R2′​，Xk​=X1σ​+X2σ′​）和短路损耗Pk​（主要为铜耗）"}]}
+{"messages":[{"role":"user","content":"变压器开路试验的目的是什么？"},{"role":"assistant","content":"测定激磁阻抗Zm​=Rm​+jXm​和空载损耗P0​（主要为铁耗），试验通常在低压侧加电压、高压侧开路"}]}
+{"messages":[{"role":"user","content":"三相变压器的磁路系统分为哪两类？"},{"role":"assistant","content":"三相变压器组（各相磁路独立，由三台单相变压器组成）和三相心式变压器（磁路为三相共用，中间心柱可省略，材料更省）"}]}
+{"messages":[{"role":"user","content":"三相变压器联结组的 “时钟表示法” 规则是什么？"},{"role":"assistant","content":"以高压侧线电压三角形中线为长针（指向 12 点），低压侧对应线电压三角形中线为短针，短针指向的钟点即为组号（如 Yd11 表示低压侧中线指向 11 点）"}]}
+{"messages":[{"role":"user","content":"变压器电压调整率的定义是什么？"},{"role":"assistant","content":"一次侧接额定电压、负载功率因数恒定，从空载到负载时二次电压变化的百分值：Δu=U2Nϕ​U20​−U2​​×100%，U20​为空载电压"}]}
+{"messages":[{"role":"user","content":"变压器额定效率的定义是什么？"},{"role":"assistant","content":"额定负载下，输出有功功率与输入有功功率的比值：ηN​=P1N​P2N​​×100%=P2N​+∑pN​P2N​​×100%，∑pN​为额定负载总损耗"}]}
+{"messages":[{"role":"user","content":"变压器最大效率的条件是什么？"},{"role":"assistant","content":"可变损耗（铜耗）等于不变损耗（铁耗），即I2∗​2PkN​=P0​，I2∗​为负载电流标幺值，PkN​为额定铜耗，P0​为空载损耗"}]}
+{"messages":[{"role":"user","content":"变压器理想并联运行的条件是什么？"},{"role":"assistant","content":"1. 额定电压和电压比相等；2. 联结组号相同；3. 短路阻抗标幺值相等且阻抗角相同"}]}
+{"messages":[{"role":"user","content":"分析电机不对称运行的基本方法是什么？"},{"role":"assistant","content":"对称分量法：将不对称三相电压 / 电流分解为正序、负序、零序三组对称分量，分别分析各组作用，再叠加结果"}]}
+{"messages":[{"role":"user","content":"变压器零序阻抗与哪些因素有关？"},{"role":"assistant","content":"与绕组联结方式（Y 无中线时零序电流无法流通，Z0​=∞；Y 有中线或 Δ 联结时可流通）和铁心结构（三相组Zm0​=Zm​，心式Zm0​≪Zm​）有关"}]}
+{"messages":[{"role":"user","content":"三绕组变压器的简化等效电路参数如何测定？"},{"role":"assistant","content":"通过三次短路试验（高 - 中、高 - 低、中 - 低绕组短路），测得三组短路阻抗，再通过公式换算得到各绕组等效漏阻抗"}]}
+{"messages":[{"role":"user","content":"自耦变压器的电压比公式是什么？"},{"role":"assistant","content":"ka​=N2​N1​+N2​​=1+k，其中N1​为串联绕组匝数，N2​为公共绕组匝数，k=N2​N1​​为原两绕组变压器电压比"}]}
+{"messages":[{"role":"user","content":"自耦变压器的额定容量与原两绕组变压器额定容量的关系是什么？"},{"role":"assistant","content":"SaN​=ka​−1ka​​SN​，SaN​为自耦变压器额定容量，SN​为原两绕组变压器额定容量，ka​为自耦变压器电压比"}]}
+{"messages":[{"role":"user","content":"电压互感器的工作特点是什么？"},{"role":"assistant","content":"一次匝数多、二次匝数少，工作时近似空载，二次侧不允许短路；二次额定电压通常为 100V，用于测量高压"}]}
+{"messages":[{"role":"user","content":"电流互感器的工作特点是什么？"},{"role":"assistant","content":"一次匝数少（常为 1 匝）、二次匝数多，工作时近似短路，二次侧不允许开路；二次额定电流通常为 5A 或 1A，用于测量大电流"}]}
+{"messages":[{"role":"user","content":"直流电机的主磁极作用是什么？"},{"role":"assistant","content":"建立主磁场，由主极铁心（1~1.5mm 钢板叠压）和励磁绕组组成，相邻主极呈 N、S 交替排列"}]}
+{"messages":[{"role":"user","content":"直流电机换向器的作用是什么？"},{"role":"assistant","content":"发电机中：将电枢线圈的交流电动势整流为电刷端的直流电动势；电动机中：将外部直流电流逆变为线圈内的交流电流，保证电磁转矩方向恒定"}]}
+{"messages":[{"role":"user","content":"直流电机的励磁方式分为哪几类？"},{"role":"assistant","content":"分为他励（励磁绕组由外部电源供电）和自励（励磁电流由电机自身提供，含并励、串励、复励）"}]}
+{"messages":[{"role":"user","content":"直流电枢绕组的元件节距包括哪几种？"},{"role":"assistant","content":"包括第一节距y1​（同一元件两有效边跨距）、合成节距y（串联两元件对应边跨距）、换向器节距yc​（同一元件两出线端换向片跨距），且y=yc​"}]}
+{"messages":[{"role":"user","content":"单叠绕组的并联支路数与极数的关系是什么？"},{"role":"assistant","content":"单叠绕组的并联支路数2a=2p，即支路对数a=p，p为电机极对数"}]}
+{"messages":[{"role":"user","content":"单波绕组的并联支路数是多少？"},{"role":"assistant","content":"无论极数多少，单波绕组的并联支路数恒为 2，即支路对数a=1"}]}
+{"messages":[{"role":"user","content":"直流电机空载时的气隙磁场分布特点是什么？"},{"role":"assistant","content":"极靴下气隙小，磁通密度均匀；极靴外气隙大，磁通密度逐步减小，几何中性线处磁通密度为零"}]}
+{"messages":[{"role":"user","content":"直流电机电枢反应的定义是什么？"},{"role":"assistant","content":"负载时电枢电流产生的电枢磁动势对主磁场的影响，包括使气隙磁场畸变、物理中性线偏移，考虑磁饱和时还会产生去磁作用"}]}
+{"messages":[{"role":"user","content":"直流电机电枢感应电动势的公式是什么？"},{"role":"assistant","content":"Ea​=Ce​nΦ，其中Ce​=60apZa​​为电动势常数，p为极对数，Za​为电枢总导体数，a为支路对数，n为转速（r/min），Φ为每极磁通（Wb）"}]}
+{"messages":[{"role":"user","content":"直流电机电磁转矩的公式是什么？"},{"role":"assistant","content":"Te​=CT​ΦIa​，其中CT​=2πapZa​​为转矩常数，p为极对数，Za​为电枢总导体数，a为支路对数，Φ为每极磁通（Wb），Ia​为电枢电流（A）"}]}
+{"messages":[{"role":"user","content":"直流发电机的电压方程是什么？"},{"role":"assistant","content":"Ea​=U+Ia​Ra​+2ΔUs​，其中Ea​为电枢电动势，U为端电压，Ia​为电枢电流，Ra​为电枢电阻，2ΔUs​为电刷接触压降（石墨电刷约 2V）"}]}
+{"messages":[{"role":"user","content":"直流电动机的电压方程是什么？"},{"role":"assistant","content":"U=Ea​+Ia​Ra​+2ΔUs​，其中U为端电压，Ea​为电枢反电动势，Ia​为电枢电流，Ra​为电枢电阻，2ΔUs​为电刷接触压降"}]}
+{"messages":[{"role":"user","content":"直流发电机的转矩方程是什么？"},{"role":"assistant","content":"T1​=Te​+T0​，其中T1​为原动机驱动转矩，Te​为电磁制动转矩，T0​为空载转矩（机械损耗 + 铁耗对应的转矩）"}]}
+{"messages":[{"role":"user","content":"直流电动机的转矩方程是什么？"},{"role":"assistant","content":"Te​=T2​+T0​，其中Te​为电磁驱动转矩，T2​为轴上输出转矩（对应负载），T0​为空载转矩"}]}
+{"messages":[{"role":"user","content":"直流电机电磁功率的定义是什么？"},{"role":"assistant","content":"电枢电动势与电枢电流的乘积Pe​=Ea​Ia​，其数值等于电磁转矩与机械角速度的乘积Te​Ω，是电能与机械能转换的中间功率"}]}
+{"messages":[{"role":"user","content":"他励直流发电机的外特性定义是什么？"},{"role":"assistant","content":"转速n=nN​、励磁电流If​=IfN​时，端电压U与负载电流I的关系U=f(I)，特性随负载增加略有下降（电枢压降 + 电枢反应去磁）"}]}
+{"messages":[{"role":"user","content":"并励直流发电机的自励条件是什么？"},{"role":"assistant","content":"1. 磁路有剩磁；2. 励磁磁动势与剩磁方向相同；3. 励磁回路总电阻小于临界电阻"}]}
+{"messages":[{"role":"user","content":"积复励直流发电机的外特性特点是什么？"},{"role":"assistant","content":"并励磁动势保证空载电压，串励磁动势补偿负载时电枢压降和电枢反应去磁，外特性可分为平复励（近似水平）、过复励（上拱）、欠复励（略有下降）"}]}
+{"messages":[{"role":"user","content":"并励直流电动机的转速公式是什么？"},{"role":"assistant","content":"n=Ce​ΦU−Ia​Ra​​，其中U为端电压，Ia​为电枢电流，Ra​为电枢电阻，Ce​为电动势常数，Φ为每极磁通"}]}
+{"messages":[{"role":"user","content":"并励直流电动机的转速调整率定义是什么？"},{"role":"assistant","content":"空载转速n0​与额定转速nN​之差占额定转速的百分值：Δn=nN​n0​−nN​​×100%，通常为 3%~8%，属恒速电机"}]}
+{"messages":[{"role":"user","content":"串励直流电动机的转速特性特点是什么？"},{"role":"assistant","content":"转速与电枢电流成近似双曲线关系，负载增加（Ia​增大）时转速迅速下降；不允许空载运行（空载时Ia​小、Φ小，转速极高易 “飞车”）"}]}
+{"messages":[{"role":"user","content":"串励直流电动机的转矩特性特点是什么？"},{"role":"assistant","content":"轻载时（磁路不饱和）Te​∝Ia2​（平方关系），重载时（磁路饱和）Te​∝Ia​（线性关系）"}]}
+{"messages":[{"role":"user","content":"复励直流电动机的机械特性特点是什么？"},{"role":"assistant","content":"介于并励（硬特性）和串励（软特性）之间；积复励时，若并励磁动势为主，特性接近并励；若串励磁动势为主，特性接近串励，但无空载 “飞车” 风险"}]}
+{"messages":[{"role":"user","content":"电力拖动系统稳定运行的条件是什么？"},{"role":"assistant","content":"在运行点处，dndTe​​<dndTL​​，即电动机电磁转矩随转速的变化率小于负载转矩随转速的变化率"}]}
+{"messages":[{"role":"user","content":"直流电动机直接起动的适用范围是什么？"},{"role":"assistant","content":"仅适用于小型电动机（容量 < 1kW），因起动时n≈0、Ea​≈0，起动电流Ist​≈U/Ra​（可达 10~20IN​），冲击大"}]}
+{"messages":[{"role":"user","content":"直流电动机电枢回路串电阻起动的原理是什么？"},{"role":"assistant","content":"起动时串入起动电阻Rst​，使起动电流Ist​=Ra​+Rst​U​限制在允许范围（通常 1.5~2.5IN​），转速上升后逐步切除电阻"}]}
+{"messages":[{"role":"user","content":"直流电动机降压起动的优点是什么？"},{"role":"assistant","content":"起动电流小、起动过程平滑、能量损耗少；需专用调压电源（如可控整流电源），适用于大容量电动机"}]}
+{"messages":[{"role":"user","content":"他励直流电动机的调速方法有哪些？"},{"role":"assistant","content":"1. 电枢控制（调电枢电压、电枢串电阻）；2. 磁场控制（调励磁电流，仅能升速）"}]}
+{"messages":[{"role":"user","content":"直流电动机能耗制动的原理是什么？"},{"role":"assistant","content":"保持励磁不变，电枢脱离电源后接制动电阻，电机变为发电机，将转子动能转化为电能消耗在电阻上，产生制动转矩"}]}
+{"messages":[{"role":"user","content":"直流电动机反接制动的注意事项是什么？"},{"role":"assistant","content":"反接时需串入足够大的制动电阻限制电流，且转速降至零时需及时断电，防止电机反转"}]}
+{"messages":[{"role":"user","content":"交流电机绕组的构成原则是什么？"},{"role":"assistant","content":"1. 力求获得较大的基波电动势和磁动势；2. 保证三相绕组对称；3. 绕组分布和短距以削弱谐波；4. 节省材料、结构简单"}]}
+{"messages":[{"role":"user","content":"三相双层绕组的优点是什么？"},{"role":"assistant","content":"可以采用短距绕组削弱谐波，绕组端部排列整齐，铜耗小，磁动势和电动势波形更接近正弦"}]}
+{"messages":[{"role":"user","content":"交流绕组感应电动势中高次谐波的主要来源是什么？"},{"role":"assistant","content":"1. 气隙磁场非正弦分布（主磁通谐波）；2. 绕组结构（如短距、分布不当导致的绕组谐波）"}]}
+{"messages":[{"role":"user","content":"单相绕组通正弦电流产生的磁动势性质是什么？"},{"role":"assistant","content":"为脉振磁动势，可分解为两个大小相等、转向相反、转速相同的旋转磁动势（正序和负序）"}]}
+{"messages":[{"role":"user","content":"三相绕组通对称正弦电流产生的磁动势性质是什么？"},{"role":"assistant","content":"为圆形旋转磁动势，幅值恒定（F1​=1.35pN1​kw1​I1​​），转速为同步转速ns​=p60f​"}]}
+{"messages":[{"role":"user","content":"感应电机的转差率定义是什么？"},{"role":"assistant","content":"s=ns​ns​−n​，其中ns​为同步转速，n为转子转速；额定转差率sN​通常为 0.02~0.06"}]}
+{"messages":[{"role":"user","content":"感应电机的电磁转矩公式（简化）是什么？"},{"role":"assistant","content":"Te​=CT​Φm​I2′​cosφ2​，其中CT​为转矩常数，Φm​为主磁通幅值，I2′​为转子电流归算值，cosφ2​为转子功率因数"}]}
+{"messages":[{"role":"user","content":"感应电机的最大转矩公式是什么？"},{"role":"assistant","content":"Tmax​=Kf1​U12​​，其中K为常数，U1​为定子电压，f1​为电源频率；最大转矩与电压平方成正比，与频率成反比"}]}
+{"messages":[{"role":"user","content":"感应电机的起动转矩公式是什么？"},{"role":"assistant","content":"Tst​=CT​Φm​I2st′​cosφ2st​，其中I2st′​为转子起动电流归算值，cosφ2st​为转子起动时功率因数（较低）"}]}
+{"messages":[{"role":"user","content":"深槽感应电机的起动原理是什么？"},{"role":"assistant","content":"利用集肤效应，起动时转子电流集中在槽口，转子电阻增大，限制起动电流、提高起动转矩；正常运行时转子电流均匀分布，电阻减小，铜耗低"}]}
+{"messages":[{"role":"user","content":"同步电机的功角特性定义是什么？"},{"role":"assistant","content":"稳态时，同步电机的电磁功率Pe​与功角δ的关系Pe​=f(δ)；隐极机Pe​=Xd​mU1​E0​​sinδ，凸极机Pe​=Xd​mU1​E0​​sinδ+2Xd​Xq​mU12​(Xd​−Xq​)​sin2δ"}]}
+{"messages":[{"role":"user","content":"同步发电机并网运行的条件是什么？"},{"role":"assistant","content":"1. 发电机电压与电网电压大小相等；2. 频率相等；3. 相位相同；4. 相序相同"}]}
+{"messages":[{"role":"user","content":"同步电动机的起动方法有哪些？"},{"role":"assistant","content":"1. 辅助电动机起动；2. 异步起动（转子装起动绕组）；3. 变频起动（通过变频器降低频率，使同步转速逐步升高）"}]}
+{"messages":[{"role":"user","content":"同步补偿机的作用是什么？"},{"role":"assistant","content":"本质为空载运行的同步电动机，用于调节电网的无功功率，改善功率因数（过励时发出感性无功，欠励时吸收感性无功）"}]}
+{"messages":[{"role":"user","content":"机电能量转换的基本条件是什么？"},{"role":"assistant","content":"1. 存在耦合磁场；2. 耦合磁场与电路、机械系统之间存在能量交换；3. 磁场储能随机械位移变化（产生电磁转矩）"}]}
+{"messages":[{"role":"user","content":"机电能量转换过程中的能量关系是什么？"},{"role":"assistant","content":"输入电能Welec​ = 输出机械能Wmech​ + 磁场储能变化ΔWm​ + 损耗∑Wloss​"}]}
+{"messages":[{"role":"user","content":"永磁无刷电动机的工作原理是什么？"},{"role":"assistant","content":"利用永磁体建立主磁场，通过位置传感器检测转子位置，控制逆变器开关器件导通 / 关断，使定子绕组通以与转子位置匹配的电流，产生恒定电磁转矩"}]}
+{"messages":[{"role":"user","content":"开关磁阻电动机的工作原理是什么？"},{"role":"assistant","content":"基于磁阻最小原理，通过定子绕组通电产生磁场，转子总是趋向于转到磁阻最小的位置，通过按一定顺序通断电实现连续旋转"}]}
+{"messages":[{"role":"user","content":"直流测速发电机的输出特性是什么？"},{"role":"assistant","content":"输出电压U2​与转速n成正比，即U2​=Kn​n，Kn​为比例常数，用于转速测量"}]}
+{"messages":[{"role":"user","content":"交流伺服电动机的控制方式是什么？"},{"role":"assistant","content":"常用幅值控制（控制定子电压幅值）、相位控制（控制定子电压相位）、幅相控制（同时控制幅值和相位），以实现转速调节"}]}
+{"messages":[{"role":"user","content":"旋转变压器的主要用途是什么？"},{"role":"assistant","content":"用于角度测量和信号变换，如在伺服系统中作为位置传感器，将转子转角转换为电信号"}]}
+{"messages":[{"role":"user","content":"自整角机的主要用途是什么？"},{"role":"assistant","content":"用于多台电机之间的角度同步，如在远距离传动系统中，使从动轴与主动轴保持相同转角"}]}
+{"messages":[{"role":"user","content":"电机温升的定义是什么？"},{"role":"assistant","content":"电机温度与环境温度的差值Δθ=θ−θ0​，θ为电机温度，θ0​为环境温度；温升限值由绝缘等级决定"}]}
+{"messages":[{"role":"user","content":"电机的冷却方式分为哪几类？"},{"role":"assistant","content":"按冷却介质分为空气冷却、氢气冷却、水冷却；按冷却方式分为自冷、强迫通风、强迫循环等"}]}
+{"messages":[{"role":"user","content":"电机的工作制分为哪几种？"},{"role":"assistant","content":"分为连续工作制（S1）、短时工作制（S2）、断续周期工作制（S3）等，不同工作制下电机的额定容量需按发热条件修正"}]}
+{"messages":[{"role":"user","content":"电机中常用的绝缘材料等级有哪些？"},{"role":"assistant","content":"常用 A 级（105℃）、B 级（130℃）、F 级（155℃）、H 级（180℃），绝缘等级决定电机的最高允许温度"}]}
+{"messages":[{"role":"user","content":"变压器的标幺值定义是什么？"},{"role":"assistant","content":"某物理量的实际值与选定基值的比值，即X∗=Xb​X​；常用额定值作为基值，如电压基值Ub​=UN​，电流基值Ib​=IN​"}]}
+{"messages":[{"role":"user","content":"变压器短路电压的定义是什么？"},{"role":"assistant","content":"短路电流为额定电流时所加的电压Uk​，常用额定电压的百分值表示：uk​%=UN​Uk​​×100%，反映短路阻抗大小"}]}
+{"messages":[{"role":"user","content":"直流电机电枢反应去磁作用的削弱方法是什么？"},{"role":"assistant","content":"1. 加装换向极（抵消交轴电枢反应）；2. 主极下气隙不均匀（极靴根部气隙大，削弱去磁）；3. 加装补偿绕组（抵消电枢反应）"}]}
+{"messages":[{"role":"user","content":"换向极的作用是什么？"},{"role":"assistant","content":"产生与交轴电枢磁动势方向相反的磁动势，抵消交轴电枢反应，改善换向（减少换向火花）"}]}
+{"messages":[{"role":"user","content":"电机中杂散损耗的主要来源是什么？"},{"role":"assistant","content":"1. 漏磁场在结构部件（如机座、端盖）中产生的涡流损耗；2. 电枢齿槽效应导致的磁场脉动损耗"}]}
+{"messages":[{"role":"user","content":"变压器油箱的作用是什么？"},{"role":"assistant","content":"1. 容纳变压器油（绝缘、冷却）；2. 保护器身（防止受潮、灰尘）；3. 大型变压器油箱上装有散热器 / 冷却器，增强散热"}]}
+{"messages":[{"role":"user","content":"感应电机转子绕组的类型有哪些？"},{"role":"assistant","content":"分为笼型转子（导条与端环构成，结构简单）和绕线转子（三相绕组，可通过滑环外接电阻调节起动 / 调速性能）"}]}
+{"messages":[{"role":"user","content":"同步电机的直轴同步电抗Xd​和交轴同步电抗Xq​区别是什么？"},{"role":"assistant","content":"凸极机中，直轴（主极轴线）气隙小，Xd​大；交轴（极间轴线）气隙大，Xq​小；隐极机气隙均匀，Xd​=Xq​=Xs​"}]}
+{"messages":[{"role":"user","content":"控制电机与普通电机的主要区别是什么？"},{"role":"assistant","content":"控制电机体积小、功率小，注重精度（如测速精度、位置精度）和快速响应性，用于自动控制系统中作为检测、执行元件"}]}
+{"messages":[{"role":"user","content":"电机设计中 “削枝强干” 原则的含义是什么？"},{"role":"assistant","content":"删减次要内容（如过时的结构设计、次要性能分析），强化核心理论（如基本原理、稳态分析、工程应用），使教材 / 设计更聚焦核心知识点"}]}

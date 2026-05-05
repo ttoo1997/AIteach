@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Synchronous motor power angle curve">
+  <style>
+    .axis { stroke: #111111; stroke-width: 5; stroke-linecap: round; }
+    .curve { stroke: #111111; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .dash { stroke: #111111; stroke-width: 4; fill: none; stroke-dasharray: 14 10; }
+    .grid { stroke: #d4d4d4; stroke-width: 2; }
+    .title { fill: #111111; font: 28px Arial, sans-serif; font-weight: 700; }
+    .label { fill: #111111; font: 20px Arial, sans-serif; }
+    .note { fill: #444444; font: 18px Arial, sans-serif; }
+  </style>
+
+  <g>
+    <line class="grid" x1="130" y1="120" x2="790" y2="120"/>
+    <line class="grid" x1="130" y1="190" x2="790" y2="190"/>
+    <line class="grid" x1="130" y1="260" x2="790" y2="260"/>
+    <line class="grid" x1="130" y1="330" x2="790" y2="330"/>
+    <line class="grid" x1="130" y1="400" x2="790" y2="400"/>
+  </g>
+
+  <line class="axis" x1="130" y1="400" x2="790" y2="400"/>
+  <line class="axis" x1="130" y1="400" x2="130" y2="86"/>
+  <path class="curve" d="M130 400 C 245 300, 340 194, 450 142 C 560 168, 662 274, 790 400"/>
+  <line class="dash" x1="450" y1="400" x2="450" y2="118"/>
+
+  <text class="title" x="180" y="64">Synchronous Motor Power-Angle</text>
+  <text class="label" x="92" y="92">Power P</text>
+  <text class="label" x="716" y="438">Angle δ (deg)</text>
+  <text class="note" x="468" y="154">δ ≈ 90° gives Pmax</text>
+  <text class="note" x="176" y="474">A larger power angle leaves less stability margin.</text>
+</svg>

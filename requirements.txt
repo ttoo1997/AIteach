@@ -1,0 +1,8 @@
+streamlit==1.56.0
+numpy==2.4.4
+matplotlib==3.10.8
+dashscope==1.25.17
+Pillow==12.2.0
+fastapi==0.136.0
+uvicorn==0.44.0
+python-multipart==0.0.26

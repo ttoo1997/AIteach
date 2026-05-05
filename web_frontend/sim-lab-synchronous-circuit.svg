@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Per-phase synchronous motor equivalent circuit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <style>
+      .wire{stroke:#1f5cae;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .title{fill:#1f4f97;font:28px 'Noto Sans SC',sans-serif}
+      .text{fill:#2f6ec8;font:22px 'Noto Sans SC',sans-serif}
+      .note{fill:#476892;font:20px 'Noto Sans SC',sans-serif}
+    </style>
+  </defs>
+  <rect x="10" y="10" width="880" height="500" rx="24" fill="url(#bg)" stroke="#d7e6ff"/>
+
+  <line class="wire" x1="120" y1="120" x2="790" y2="120"/>
+  <line class="wire" x1="120" y1="400" x2="790" y2="400"/>
+  <line class="wire" x1="120" y1="120" x2="120" y2="400"/>
+
+  <circle cx="120" cy="260" r="54" fill="#fff" stroke="#1f5cae" stroke-width="6"/>
+  <text class="title" x="102" y="272">~</text>
+  <text class="text" x="82" y="194">Vt</text>
+
+  <line class="wire" x1="300" y1="120" x2="300" y2="190"/>
+  <polyline class="wire" points="300,190 325,215 275,240 325,265 275,290 325,315 300,340"/>
+  <line class="wire" x1="300" y1="340" x2="300" y2="400"/>
+  <text class="text" x="340" y="262">Ra</text>
+
+  <line class="wire" x1="470" y1="120" x2="470" y2="175"/>
+  <path class="wire" d="M445 175q25 25 0 50q25 25 0 50q25 25 0 50"/>
+  <line class="wire" x1="470" y1="325" x2="470" y2="400"/>
+  <text class="text" x="504" y="258">jXs</text>
+
+  <circle cx="690" cy="260" r="62" fill="#fff" stroke="#1f5cae" stroke-width="6"/>
+  <path class="wire" d="M655 260q35-40 70 0q-35 40-70 0"/>
+  <path class="wire" d="M698 220v80"/>
+  <text class="text" x="652" y="356">Ea</text>
+
+  <text class="title" x="205" y="70">同步电机每相等效电路</text>
+  <text class="note" x="190" y="448">近似关系：Vt = Ea + IaRa + jIaXs</text>
+  <text class="note" x="208" y="478">功角 delta 在相量图中定义，功角特性另见 P-delta 曲线</text>
+</svg>
