@@ -17,6 +17,7 @@ __pycache__/
 *.sqlite3
 
 AITeach_OneClick_Package/
+大创AI/
 *.zip
 
 .DS_Store
